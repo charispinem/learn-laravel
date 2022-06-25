@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Barang;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,14 +13,19 @@ class HomeController extends Controller
         return view('welcome');
     }
 
-    public function home()
+    public function barang()
     {
-        return view('home');
+        return view('barang', [
+            'barangs' => Barang::all(),
+        ]);
     }
 
-    public function about()
+    public function data_user()
     {
-        return view('about');
+        return view('data-user', [
+            // memanggil Data Database
+            'users' => User::all(),
+        ]);
     }
 
     public function contact()
