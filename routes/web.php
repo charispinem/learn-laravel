@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PegawaiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +20,5 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/barang', [HomeController::class, 'barang'])->name('barang');
-Route::get('/data-user', [HomeController::class, 'data_user'])->name('data-user');
+Route::get('/data-pegawai', [PegawaiController::class, 'data_pegawai'])->name('data-pegawai');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');

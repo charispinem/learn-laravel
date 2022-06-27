@@ -20,14 +20,6 @@ class HomeController extends Controller
         ]);
     }
 
-    public function data_user()
-    {
-        return view('data-user', [
-            // memanggil Data Database
-            'users' => User::all(),
-        ]);
-    }
-
     public function contact()
     {
         return view('contact');

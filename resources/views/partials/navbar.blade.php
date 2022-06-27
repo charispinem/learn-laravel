@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('data-user') }}">Data User</a>
+            <a class="nav-link" href="{{ route('data-pegawai') }}">Data Pegawai</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('barang') }}">Stock Barang</a>

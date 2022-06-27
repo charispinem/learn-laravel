@@ -14,7 +14,7 @@
                         <thead>
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">User ID</th>
+                            <th scope="col">ID Pegawai</th>
                             <th scope="col">Kode Barang</th>
                             <th scope="col">Nama Barang</th>
                             <th scope="col">Jenis Barang</th>
@@ -28,7 +28,7 @@
                             @foreach ($barangs as $key => $barang)
                             <tr>
                                 <th scope="row">{{ ++$key }}</th>
-                                <td>{{ $barang->user_id }}</td>
+                                <td>{{ $barang->id_pegawai }}</td>
                                 <td>{{ $barang->kode_barang }}</td>
                                 <td>{{ $barang->nama_barang }}</td>
                                 <td>{{ $barang->jenis_barang }}</td>
