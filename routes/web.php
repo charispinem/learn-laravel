@@ -21,4 +21,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/barang', [HomeController::class, 'barang'])->name('barang');
 Route::get('/data-pegawai', [PegawaiController::class, 'data_pegawai'])->name('data-pegawai');
+Route::get('/create-pegawai', [PegawaiController::class, 'create_pegawai'])->name('create-pegawai');
+Route::post('/save-pegawai', [PegawaiController::class, 'store'])->name('save-pegawai');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');

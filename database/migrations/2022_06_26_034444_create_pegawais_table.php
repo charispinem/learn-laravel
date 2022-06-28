@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('pegawais', function (Blueprint $table) {
             $table->id();
-            $table->string('id_pegawai');
+            $table->foreignId('barang_id'); //menghubungkan table barang ke table pegawai
+            $table->string('id_pegawai')->unique();
             $table->String('nama');
-            $table->String('alamat');
             $table->date('tgllahir');
+            $table->String('alamat');
             $table->timestamps();
         });
     }

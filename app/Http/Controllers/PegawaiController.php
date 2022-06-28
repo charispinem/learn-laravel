@@ -14,4 +14,14 @@ class PegawaiController extends Controller
             'pegawais' => Pegawai::all()
         ]);
     }
+
+    public function create_pegawai()
+    {
+        return view('pegawai.create-pegawai');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
 }
