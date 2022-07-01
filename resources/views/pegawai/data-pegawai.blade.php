@@ -36,7 +36,7 @@
                                 <td>{{ $pegawai->alamat }}</td>
                                 <td>{{ $pegawai->created_at }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="{{ route('edit-pegawai') }}" class="btn btn-warning btn-sm">Edit</a>
                                     <a href="#" class="btn btn-danger btn-sm">Delete</a>
                                 </td>
                             </tr>

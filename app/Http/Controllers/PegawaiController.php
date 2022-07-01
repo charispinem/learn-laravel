@@ -33,4 +33,14 @@ class PegawaiController extends Controller
         ]);
         return redirect('data-pegawai');
     }
+
+    public function edit(Request $request)
+    {
+        Pegawai::create([
+            'id_pegawai' => $request->id_pegawai,
+            'nama' => $request->nama,
+            'tgllahir' => $request->tgllahir,
+            'alamat' => $request->alamat,
+        ]);
+    }
 }
