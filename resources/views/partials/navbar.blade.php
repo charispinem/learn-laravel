@@ -9,7 +9,7 @@
             <a class="nav-link" href="{{ route('data-pegawai') }}">Data Pegawai</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('barang') }}">Stock Barang</a>
+            <a class="nav-link" href="{{ route('data-barang') }}">Stock Barang</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('contact') }}">Contact</a>

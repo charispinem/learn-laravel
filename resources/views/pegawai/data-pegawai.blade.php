@@ -4,10 +4,10 @@
 @section('content')
 
 <div class="row">
-    <div class="col-10">
+    <div class="col-11">
         <div class="card">
             <div class="card-header">
-            Data Pegawai
+            <h3>Data Pegawai</h3>
             </div>
             <div class="card-body">
                 <div class="card-tools mb-3">
@@ -36,8 +36,8 @@
                                 <td>{{ $pegawai->alamat }}</td>
                                 <td>{{ $pegawai->created_at }}</td>
                                 <td>
-                                    <a href="{{ route('edit-pegawai') }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href="{{ route('tampildata',$pegawai->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="{{ route('delete',$pegawai->id) }}" class="btn btn-danger btn-sm">Delete</a>
                                 </td>
                             </tr>
                             @endforeach

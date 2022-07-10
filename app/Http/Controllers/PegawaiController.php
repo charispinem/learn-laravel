@@ -34,13 +34,28 @@ class PegawaiController extends Controller
         return redirect('data-pegawai');
     }
 
-    public function edit(Request $request)
+    public function destroy($id)
     {
-        Pegawai::create([
-            'id_pegawai' => $request->id_pegawai,
-            'nama' => $request->nama,
-            'tgllahir' => $request->tgllahir,
-            'alamat' => $request->alamat,
+        $pegawai = Pegawai::findOrFail($id);
+        $pegawai->delete();
+        return redirect()->route('data-pegawai');
+        // dd($id);
+        // $pegawai = Pegawai::find($id);
+        // $pegawai->delete();
+        // return redirect()->route('data-pegawai');
+    }
+
+    public function tampildata($id)
+    {
+        return view('pegawai.edit-pegawai', [
+            'pegawai' => Pegawai::findOrFail($id)
         ]);
+    }
+
+    public function updatedata(Request $request, $id)
+    {
+        Pegawai::findOrFail($id)->update($request->all());
+        // $pegawai->update($pegawai->all());
+        return redirect()->route('data-pegawai');
     }
 }

@@ -8,10 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Barang extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'id',
+        'kode_barang',
+        'nama_barang',
+        'jenis_barang',
+        'keterangan',
+    ];
 
-
-    public function user()
+    public function pegawai()
     {
-        return $this->belongsTo(User::class);
+        // satu barang dimiliki satu pegawai
+        return $this->belongsTo(Pegawai::class);
     }
 }
