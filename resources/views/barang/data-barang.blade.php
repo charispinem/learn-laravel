@@ -31,10 +31,9 @@
                             @foreach ($barangs as $key => $barang)
                             <tr>
                                 <th scope="row">{{ ++$key }}</th>
-                                
                                 {{-- input relasi antar table pegawai -> table barang --}}
                                 <td><a href="/pegawai/{{ $barang->pegawai_id }}/data">{{ $barang->pegawai->id_pegawai }}</a></td>
-
+                                {{-- <td>{{ $barang->pegawai->id_pegawai }}</td> --}}
                                 <td>{{ $barang->kode_barang }}</td>
                                 <td>{{ $barang->nama_barang }}</td>
                                 <td>{{ $barang->jenis_barang }}</td>

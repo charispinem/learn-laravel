@@ -17,6 +17,7 @@ class PegawaiController extends Controller
 
     public function create_pegawai()
     {
+
         return view('pegawai.create-pegawai');
     }
 
@@ -54,7 +55,7 @@ class PegawaiController extends Controller
 
     public function updatedata(Request $request, $id)
     {
-        Pegawai::findOrFail($id)->update($request->all());
+        $pegawai = Pegawai::findOrFail($id)->update($request->all());
         // $pegawai->update($pegawai->all());
         return redirect()->route('data-pegawai');
     }

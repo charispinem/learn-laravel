@@ -26,7 +26,10 @@ class BarangController extends Controller
      */
     public function create()
     {
-        return view('barang.create-barang');
+        $barang = Barang::all();
+        return view('barang.create-barang', [
+            $barang
+        ]);
     }
 
     /**
@@ -85,11 +88,17 @@ class BarangController extends Controller
         return redirect()->route('data-barang');
     }
 
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function destroy($id)
     {
-        $barang = Barang::findOrFail($id);
-        $barang->delete();
+        dd($id);
+        // $barang = Barang::findOrFail($id);
+        // $barang->delete();
         // return redirect()->route('data-barang');
     }
 }

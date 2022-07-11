@@ -18,7 +18,7 @@ class Pegawai extends Model
 
     public function barang()
     {
-        // satu pegawai memiliki banyak barang
+        // satu pegawai memiliki banyak barang  
         return $this->hasMany(Barang::class);
     }
 }

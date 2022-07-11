@@ -13,6 +13,7 @@
                 
                 <form action="{{ route('save-barang') }}" method="post">
                     @csrf
+                    
                     <div class="form-group">
                         <input type="text" id="kode_barang" name="kode_barang" class="form-control" placeholder="Kode Barang">
                     </div>

@@ -21,14 +21,6 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', [HomeController::class, 'index']);
 
-// Route Barang Start   
-Route::get('/data-barang', [BarangController::class, 'data_barang'])->name('data-barang');
-Route::get('/data-barang/tambah', [BarangController::class, 'create'])->name('create-barang');
-Route::post('/save-barang', [BarangController::class, 'store'])->name('save-barang');
-Route::get('/tb/{id}/edit', [BarangController::class, 'tampilbarang'])->name('tampil-barang');
-Route::post('/update/{id}', [BarangController::class, 'update'])->name('update-barang');
-Route::get('/delete/{id}', [BarangController::class, 'destroy'])->name('delete');
-// Route Barang End
 
 
 // Route Pegawai Start
@@ -40,4 +32,12 @@ Route::post('/updatedata/{id}', [PegawaiController::class, 'updatedata'])->name(
 Route::get('/delete/{id}', [PegawaiController::class, 'destroy'])->name('delete');
 // Route Pegawai End
 
+// Route Barang Start   
+Route::get('/data-barang', [BarangController::class, 'data_barang'])->name('data-barang');
+Route::get('/data-barang/tambah', [BarangController::class, 'create'])->name('create-barang');
+Route::post('/save-barang', [BarangController::class, 'store'])->name('save-barang');
+Route::get('/tb/{id}/edit', [BarangController::class, 'tampilbarang'])->name('tampil-barang');
+Route::post('/update/{id}', [BarangController::class, 'update'])->name('update-barang');
+Route::get('/barang/{id}/delete', [BarangController::class, 'destroy'])->name('delete');
+// Route Barang End
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
